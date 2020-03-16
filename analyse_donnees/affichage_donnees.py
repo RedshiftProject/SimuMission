@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 import math
 import numpy as np
 
-simu_downwind = pd.read_csv('Simulation_Downwind.csv',header=0, sep = ';', engine='python')
-simu_downwind_balistic = pd.read_csv('Simulation_Downwind_Balistic.csv',header=0, sep = ';', engine='python')
+simu_downwind = pd.read_csv('Downwind.csv',header=0, sep = ';', engine='python')
+simu_downwind_balistic = pd.read_csv('Downwind_balistic.csv',header=0, sep = ';', engine='python')
 
 i_sortie_rampe = 31
 i_fin_poussee = 123
@@ -247,7 +247,7 @@ forces.plot(simu_downwind.loc[:,'# Time (s)'], simu_downwind.loc[:,'Gravitationa
 acc.plot(simu_downwind.loc[:,'# Time (s)'], simu_downwind.loc[:,'Total acceleration (m/s²)'] , linewidth = 1)
 
 forces.legend()
-plt.savefig( 'ImagesSimulations\Dynamics', papertype = 'a5', dpi = 1080, transparent = True  )
+plt.savefig( 'Dynamics', papertype = 'a5', dpi = 1080, transparent = True  )
 
 del fig
 
@@ -269,7 +269,7 @@ vit.plot(simu_downwind.loc[:,'# Time (s)'], simu_downwind.loc[:,'Total velocity 
 mach.plot(simu_downwind.loc[:,'# Time (s)'], simu_downwind.loc[:,'Mach number (?)'], linewidth = 1, color = 'red')
 
 forces.legend()
-plt.savefig( 'ImagesSimulations\Kinematics', papertype = 'a5', dpi = 1080, transparent = True  )
+plt.savefig( 'Kinematics', papertype = 'a5', dpi = 1080, transparent = True  )
 
 
 
