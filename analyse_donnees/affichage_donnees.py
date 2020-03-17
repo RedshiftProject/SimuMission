@@ -13,9 +13,9 @@ import numpy as np
 simu_downwind = pd.read_csv('Downwind.csv',header=0, sep = ';', engine='python')
 simu_downwind_balistic = pd.read_csv('Downwind_balistic.csv',header=0, sep = ';', engine='python')
 
-i_sortie_rampe = 31
-i_fin_poussee = 123
-i_apogee = 492
+i_sortie_rampe = 32
+i_fin_poussee = 206
+i_apogee = 553
 
 ## =============================================================================
 ## 
@@ -39,22 +39,6 @@ total_forces = simu_downwind.loc[:,'Thrust (N)'] + simu_downwind.loc[:,'Drag for
 ## 
 ## =============================================================================
 #
-
-fig = plt.figure()
-fig.add_axes()
-plt.grid()
-plt.title('Velocity to apogee')
-plt.xlabel('Flight time (s)')
-plt.ylabel('Velocity (m/s)')
-plt.xlim([0,35])
-
-plt.plot(simu_downwind.loc[:,'# Time (s)'], simu_downwind.loc[:,'Total velocity (m/s)'], linewidth = 1)
-            
-#plt.legend()
-plt.tight_layout()
-plt.savefig( 'Velocity to Apogee', papertype = 'a5', dpi = 1080, transparent = True  )
-
-del fig
 
 fig = plt.figure()
 fig.add_axes()
